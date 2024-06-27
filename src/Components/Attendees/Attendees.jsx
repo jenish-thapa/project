@@ -10,20 +10,20 @@ const Attendees = () => {
 
   let iconStyles = { color: "white", fontSize: "1.5em" };
   const filteredAttendees = data.filter((item) => {
-    return search.toLowerCase() === ""
+    return search === ""
       ? item
       : item.name.toLowerCase().startsWith(search);
   });
   console.log(search);
   return (
-    <>
+    <div id="body">
       <div id="searchbar">
         <input
           type="text"
           id="search"
           placeholder="Search Attendees"
           onChange={(e) => {
-            setSearch(e.target.value.trim());
+            setSearch(e.target.value.toLowerCase().trim());
           }}
         />
       </div>
@@ -85,7 +85,7 @@ const Attendees = () => {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 };
 export default Attendees;
