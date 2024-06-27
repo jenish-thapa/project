@@ -127,10 +127,10 @@
 }
 
 #body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #searchbar {
@@ -180,17 +180,47 @@ input:focus {
 }
 
 #searchbar::after {
-    content: "";
-    background: inherit;
-    position: absolute;
-    border-radius: inherit;
+  content: "";
+  background: inherit;
+  position: absolute;
+  border-radius: inherit;
 }
 
 @keyframes rotate {
-    from {
-        transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
-    }
-    to {
-        transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
-    }
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #searchbar {
+    width: 70vw;
+  }
+
+  .attendee-body {
+    width: 20rem;
+  }
+
+  .img-holder img {
+    height: 6rem;
+    top: -4rem;
+  }
+
+  .email,
+  .phone {
+    font-size: 0.6rem;
+  }
+
+  .icons {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+   
+  .details {
+    top: -3rem;
+    font-size: 0.8rem;
+  }
 }
